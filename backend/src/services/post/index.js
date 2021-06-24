@@ -16,29 +16,6 @@ import uniqid from "uniqid"
 
 import {inspector} from 'schema-inspector'
 import htmlValidator from 'express-html-validator'
-schema = {
-  type: object,
-  properties : {
-    category : { type: 'string', optional: false, },
-    text : { type: 'string', optional: false, minLength: 10},
-    title: { type: 'string', optional: false, minLength: 6},
-    cover: { type: 'string', optional: false},
-    readTime : { type: 'object' ,
-      properties:{
-        "value": { type: 'any'},
-        "unit": { type: 'any'}
-      }
-    },
-    author: { type: 'object' ,
-      properties: {
-        "name": { type: 'any'},
-        "avatar": { type: 'any'}
-      }},
-    "content": { type: 'string'},
-    "createdAt": { type: 'string'}
-  }
-
-}
 
 const postsRouter = express.Router()
 
